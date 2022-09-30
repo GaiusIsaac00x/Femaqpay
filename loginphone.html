@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="public/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="public/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link rel="stylesheet" href="public/animation.css">
+    <link rel="stylesheet" href="public/femag.css">
+    <link rel="shortcut icon" href="./svg/logo 1.svg" type="image/x-icon">
+    <title>User | Login</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7 d-lg-block d-none phone py-4 coldark" style="height: 100vh;">
+                <div class="text-center mt-5">
+                    <img src="./svg/verification/gygyghuhuh.png" class="img-fluid" alt="" width="39%">
+                </div>
+                <p class="text-center tradyu mt-5"> <b> Trade your  <span class="clip">cryptocurrencies</span> <br>  faster at the best rate </b> </p>
+                <p class="text-center pb-2 txtcl">Get instant funding after network <br> confirmations with no P2P or escrow fee.</p>    
+            </div>
+            <div class="col-lg-5 px-5 py-4 coldark2">
+                <div class="p-3">
+                    <div class="switch">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                    <!-- <div class="theme-toggler">
+                        <span class="material-icons-sharp active zone"> light_mode </span>
+                        <span class="material-icons-sharp"> dark_mode </span>
+                       </div> -->
+                </div>
+               
+                <div class="rotor text-center mt-5"> <img src="./svg/verification/Stepper (4).svg" alt="" class="img-fluid w-100"> </div>
+                <p class="mt-5 your"> <b> Login with Phone </b> </p>
+                <p class="mt-2 txtcl" style="color:#696F8C;font-size:18px;"> <b> Access your account with your number.</b></p>
+                <form>
+                    <div class="form-group">
+                        <label for=""></label>
+                      <input type="tel" class="form-control wotor2 py-3 mt-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Phone Number">
+                    </div>
+                    <div class="text-center my-4"><button type="submit" class="btn btn-primary wotor9 py-3"> Next </button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    const currentTheme = localStorage.getItem('theme');
+    
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+      
+        if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+        }
+    }
+    
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+        else {        document.documentElement.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+        }    
+    }
+    
+    toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
+    
+
+
+
+    <script src="./public/js/toggle.js"></script>
+    <script src="public/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/dataTables.bootstrap5.min.js"></script>
+    <script src="public/js/jquery.dataTables.min.js"></script>
+    <script src="public/js/script.js"></script>
+</body>
+</html>

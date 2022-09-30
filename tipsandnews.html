@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips and News</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="public/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="public/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link rel="stylesheet" href="public/animation.css">
+    <link rel="stylesheet" href="public/femag.css">
+    <link rel="shortcut icon" href="./svg/logo 1.svg" type="image/x-icon">
+  <style>
+
+   
+.switch {
+    height: 100px;
+    position: absolute;
+    top: 15px;
+    right: 230px;
+}
+@media screen and (max-width:992px) {
+    .switch{
+      right: 35%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .switch{
+      right: 50%;
+    }
+}
+@media screen and (max-width:730px) {
+    .switch{
+      right: 55%;
+    }
+}
+@media screen and (max-width:685px) {
+    .switch{
+      right: 60%;
+    }
+}
+@media screen and (max-width:600px) {
+    .switch{
+      right: 40%;
+    }
+}
+@media screen and (max-width:480px) {
+    .switch{
+      right: 63%;
+    }
+  }
+ </style>  
+
+</head>
+<body>
+<div class="contanier">
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="./dashboard.html">
+            <span class="ms-2">
+              <img src="./svg/logo 1.svg" alt="" width="40px" height="39px">
+            </span>
+            <span class="brand"><h3 class="cl">Femag Pay </h3></span>
+          </a>
+        </li>
+        <li class="">
+          <a href="./dashboard.html" class="ms-2">
+              <span class="icon"> <svg class="me-4" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.8333 2.5V7.5H17.5V2.5H10.8333ZM10.8333 17.5H17.5V9.16667H10.8333V17.5ZM2.5 17.5H9.16667V12.5H2.5V17.5ZM2.5 10.8333H9.16667V2.5H2.5V10.8333Z" fill=""/>
+                </svg> </span>
+              <span class="title txtcl">Dashboard</span>
+          </a>
+      </li>
+        <li class="strokeey">
+            <a href="./trade.html" class="ms-2">
+                <span class="icon"> <svg width="24"  class="me-4" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.58333 5.83333H21.75L17.4167 1.5M17.4167 10.1667H2.25L6.58333 14.5" stroke="black" stroke-opacity="0.92" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                   </span>
+                <span class="title txtcl">Trade</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="./transaction.html" class="ms-2">
+                <span class="icon"> <svg width="18" class="me-4" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.3334 5.66669V9.83335H0.666748V5.66669H5.77175C5.95711 6.38189 6.37473 7.01529 6.95903 7.46746C7.54334 7.91963 8.26125 8.16497 9.00008 8.16497C9.73891 8.16497 10.4568 7.91963 11.0411 7.46746C11.6254 7.01529 12.0431 6.38189 12.2284 5.66669H17.3334ZM17.3334 4.00002H0.666748L4.83342 0.666687H13.1667L17.3334 4.00002ZM17.3334 11.5V15.6667C17.3334 16.1087 17.1578 16.5326 16.8453 16.8452C16.5327 17.1578 16.1088 17.3334 15.6668 17.3334H2.33342C1.89139 17.3334 1.46746 17.1578 1.1549 16.8452C0.842343 16.5326 0.666748 16.1087 0.666748 15.6667V11.5H5.77175C5.95711 12.2152 6.37473 12.8486 6.95903 13.3008C7.54334 13.753 8.26125 13.9983 9.00008 13.9983C9.73891 13.9983 10.4568 13.753 11.0411 13.3008C11.6254 12.8486 12.0431 12.2152 12.2284 11.5H17.3334ZM7.55675 11.5H10.4434C10.2971 11.7534 10.0867 11.9637 9.83338 12.11C9.58002 12.2563 9.29263 12.3333 9.00008 12.3333C8.70754 12.3333 8.42014 12.2563 8.16679 12.11C7.91343 11.9637 7.70304 11.7534 7.55675 11.5ZM7.55508 5.67669H10.4417C10.2955 5.93003 10.0851 6.14041 9.83171 6.28668C9.57836 6.43294 9.29096 6.50995 8.99842 6.50995C8.70587 6.50995 8.41848 6.43294 8.16512 6.28668C7.91176 6.14041 7.70137 5.93003 7.55508 5.67669Z" fill="black"/>
+                  </svg>
+                   </span>
+                <span class="title txtcl">Transaction</span>
+            </a>
+        </li>
+        <li class="">
+          <a href="./tipsandnews.html" class="ms-2 panel-active" id="activetab">
+              <span class="icon" id="activeicon"> <svg width="22" class="me-4" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.7371 2.09531C14.6938 2.36615 14.6721 2.63698 14.6721 2.90781C14.6721 5.34531 16.6438 7.3159 19.0704 7.3159C19.3413 7.3159 19.6013 7.28448 19.8721 7.24115V15.9826C19.8721 19.6561 17.7054 21.8336 14.0221 21.8336H6.01734C2.33293 21.8336 0.16626 19.6561 0.16626 15.9826V7.96698C0.16626 4.28365 2.33293 2.09531 6.01734 2.09531H14.7371ZM14.9548 8.68198C14.6613 8.64948 14.3698 8.77948 14.1954 9.01781L11.5748 12.4086L8.57293 10.047C8.38876 9.90615 8.17209 9.8509 7.95543 9.87365C7.73984 9.90615 7.54484 10.0242 7.41376 10.1976L4.20818 14.3695L4.14209 14.467C3.95793 14.8126 4.04459 15.2567 4.36959 15.4961C4.52126 15.5936 4.68376 15.6586 4.86793 15.6586C5.11818 15.6695 5.35543 15.5384 5.50709 15.3336L8.22626 11.8334L11.3138 14.1528L11.4113 14.2167C11.7579 14.4009 12.1913 14.3153 12.4404 13.9892L15.5713 9.94948L15.5279 9.97115C15.7013 9.73281 15.7338 9.42948 15.6146 9.15865C15.4965 8.88781 15.2354 8.70365 14.9548 8.68198ZM19.2222 0.166656C20.663 0.166656 21.833 1.33666 21.833 2.77749C21.833 4.21832 20.663 5.38832 19.2222 5.38832C17.7814 5.38832 16.6114 4.21832 16.6114 2.77749C16.6114 1.33666 17.7814 0.166656 19.2222 0.166656Z" fill="black" fill-opacity="0.92"/>
+                </svg>
+                 </span>
+              <span class="title txtbl">Tips & News</span>
+          </a>
+      </li>
+      <li class="">
+        <a href="./settings.html" class="ms-2">
+            <span class="icon"> <svg width="19" class="me-4" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.78 7.19875H15.8263C15.7038 7.19875 15.6163 7.1025 15.5638 6.97125C15.5325 6.92305 15.5159 6.86683 15.5159 6.80938C15.5159 6.75192 15.5325 6.6957 15.5638 6.6475L16.2725 6C16.4114 5.86639 16.5218 5.70601 16.597 5.52855C16.6722 5.35109 16.7106 5.16023 16.71 4.9675C16.7098 4.77359 16.671 4.58167 16.5959 4.4029C16.5208 4.22413 16.4109 4.0621 16.2725 3.92625L15.1 2.7275C14.9642 2.59072 14.8026 2.48217 14.6247 2.4081C14.4467 2.33402 14.2559 2.29588 14.0631 2.29588C13.8704 2.29588 13.6795 2.33402 13.5016 2.4081C13.3236 2.48217 13.1621 2.59072 13.0263 2.7275L12.3525 3.375C12.299 3.4093 12.2367 3.42753 12.1731 3.42753C12.1095 3.42753 12.0473 3.4093 11.9938 3.375C11.9409 3.3553 11.8948 3.32098 11.8607 3.27606C11.8266 3.23113 11.806 3.17744 11.8013 3.12125V2.22C11.8014 1.83759 11.6526 1.47018 11.3863 1.19572C11.12 0.921266 10.7572 0.761381 10.375 0.75H8.6775C8.28682 0.749993 7.91202 0.904588 7.63495 1.18002C7.35788 1.45545 7.20106 1.82933 7.19875 2.22V3.17375C7.19875 3.29625 7.1025 3.38375 6.97125 3.43625C6.92305 3.46751 6.86683 3.48415 6.80938 3.48415C6.75192 3.48415 6.6957 3.46751 6.6475 3.43625L6 2.7275C5.72287 2.45202 5.34947 2.29513 4.95875 2.29C4.76617 2.29038 4.57561 2.32928 4.39829 2.40441C4.22097 2.47955 4.06047 2.5894 3.92625 2.7275L2.7275 3.9C2.58673 4.03625 2.47479 4.19942 2.39834 4.3798C2.32189 4.56018 2.28249 4.75409 2.28249 4.95C2.28249 5.14591 2.32189 5.33982 2.39834 5.5202C2.47479 5.70059 2.58673 5.86375 2.7275 6L3.375 6.6475C3.4093 6.70104 3.42753 6.76329 3.42753 6.82688C3.42753 6.89046 3.4093 6.95271 3.375 7.00625C3.3553 7.05909 3.32098 7.10524 3.27606 7.13932C3.23113 7.1734 3.17744 7.19401 3.12125 7.19875H2.22C1.83013 7.19875 1.45623 7.35363 1.18055 7.6293C0.904875 7.90498 0.75 8.27888 0.75 8.66875V10.3225C0.749993 10.7132 0.904588 11.088 1.18002 11.3651C1.45545 11.6421 1.82933 11.7989 2.22 11.8013H3.17375C3.29625 11.8013 3.38375 11.8975 3.43625 12.0288C3.46751 12.077 3.48415 12.1332 3.48415 12.1906C3.48415 12.2481 3.46751 12.3043 3.43625 12.3525L2.7275 13C2.45202 13.2771 2.29513 13.6505 2.29 14.0413C2.2897 14.2352 2.32826 14.4273 2.4034 14.6061C2.47854 14.785 2.58874 14.9469 2.7275 15.0825L3.9 16.2725C4.03582 16.4093 4.19736 16.5178 4.37531 16.5919C4.55327 16.666 4.74412 16.7041 4.93688 16.7041C5.12963 16.7041 5.32048 16.666 5.49844 16.5919C5.67639 16.5178 5.83793 16.4093 5.97375 16.2725L6.6475 15.625C6.70104 15.5907 6.76329 15.5725 6.82688 15.5725C6.89046 15.5725 6.95271 15.5907 7.00625 15.625C7.05909 15.6447 7.10524 15.679 7.13932 15.7239C7.1734 15.7689 7.19401 15.8226 7.19875 15.8788V16.8325C7.21236 17.2132 7.37322 17.5737 7.64743 17.8382C7.92165 18.1026 8.28781 18.2502 8.66875 18.25H10.3225C10.7132 18.25 11.088 18.0954 11.3651 17.82C11.6421 17.5446 11.7989 17.1707 11.8013 16.78V15.8263C11.8013 15.7038 11.8975 15.6163 12.0288 15.5638C12.077 15.5325 12.1332 15.5159 12.1906 15.5159C12.2481 15.5159 12.3043 15.5325 12.3525 15.5638L13.0175 16.2375C13.2946 16.513 13.668 16.6699 14.0588 16.675C14.2513 16.6746 14.4419 16.6357 14.6192 16.5606C14.7965 16.4855 14.957 16.3756 15.0913 16.2375L16.2638 15.065C16.4005 14.9292 16.5091 14.7676 16.5832 14.5897C16.6572 14.4117 16.6954 14.2209 16.6954 14.0281C16.6954 13.8354 16.6572 13.6445 16.5832 13.4666C16.5091 13.2886 16.4005 13.1271 16.2638 12.9913L15.625 12.3525C15.5937 12.3043 15.5771 12.2481 15.5771 12.1906C15.5771 12.1332 15.5937 12.077 15.625 12.0288C15.6447 11.9759 15.679 11.9298 15.7239 11.8957C15.7689 11.8616 15.8226 11.841 15.8788 11.8363H16.8325C17.2117 11.8227 17.571 11.6631 17.8351 11.3907C18.0993 11.1184 18.248 10.7544 18.25 10.375V8.6775C18.25 8.28682 18.0954 7.91202 17.82 7.63495C17.5446 7.35788 17.1707 7.20106 16.78 7.19875ZM9.5 12.5625C8.8943 12.5625 8.30219 12.3829 7.79857 12.0464C7.29494 11.7099 6.90241 11.2316 6.67062 10.672C6.43883 10.1124 6.37818 9.4966 6.49635 8.90254C6.61451 8.30847 6.90619 7.76278 7.33449 7.33449C7.76278 6.90619 8.30847 6.61451 8.90254 6.49635C9.4966 6.37818 10.1124 6.43883 10.672 6.67062C11.2316 6.90241 11.7099 7.29494 12.0464 7.79857C12.3829 8.30219 12.5625 8.8943 12.5625 9.5C12.5625 10.3122 12.2398 11.0912 11.6655 11.6655C11.0912 12.2398 10.3122 12.5625 9.5 12.5625Z" fill="black"/>
+              </svg>
+               </span>
+            <span class="title txtcl">Settings</span>
+        </a>
+    </li>
+    <!-- we wan put earpiece here -->
+    <div class="ms-5 newdiv pb-4" id="hide">
+      <div class="ounus"><img src="./svg/icons/headies.svg" alt="" width="100%"></div>
+      <div class="ounus2"> <img src="./svg/icons/Ellipse 68.svg" alt=""> </div>
+      <p class="text-center zootopia">Need Help?</p>
+      <p class="px-2 zootopia2">Having trouble processing trade and other account related issues?</p>
+      <div class="text-center"><a href="" class="zootopia3 px-3 py-2">Support</a></div>
+      <div class="ounus3"> <img src="./svg/icons/Ellipse 69.svg" alt=""> </div>
+    </div>
+
+  <li class="logout">
+    <a href="" class="ms-2">
+        <span class="icon"> <svg width="18" class="me-4" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.8175 3.57689L17.9987 7.60658L13.8175 11.606V8.92456H7.56091V6.2583H13.8175V3.57689ZM11.3028 11.3333L12.9086 12.9542C11.3331 14.4288 9.62625 15.166 7.78815 15.166C5.59657 15.166 3.75089 14.4414 2.25112 12.9921C0.75135 11.5428 0.00146484 9.73252 0.00146484 7.56113C0.00146484 6.1977 0.344847 4.93527 1.03161 3.77383C1.71837 2.61239 2.645 1.69587 3.81149 1.02425C4.97798 0.352638 6.24293 0.0168304 7.60636 0.0168304C9.46466 0.0168304 11.227 0.764191 12.8934 2.25891L11.3028 3.86473C10.1514 2.81438 8.92434 2.28921 7.62151 2.28921C6.11669 2.28921 4.84668 2.81438 3.81149 3.86473C2.77629 4.91507 2.2587 6.1977 2.2587 7.71262C2.2587 9.12655 2.79144 10.3435 3.85694 11.3636C4.92243 12.3836 6.17224 12.8936 7.60636 12.8936C8.92939 12.8936 10.1615 12.3735 11.3028 11.3333Z" fill="black"/>
+          </svg>
+           </span>
+        <span class="title txtcl">Log Out</span>
+    </a>
+</li>
+     </ul>
+    </div>
+        <div class="main">
+            <div class="topbar navtop">
+              <div>
+                <div class="toggle" onclick="toggleMenu(); myFunction()">
+                    
+                </div>
+              </div>
+              <div class="d-flex" style="margin-left: auto;">
+                <div class="switch">
+                  <label class="theme-switch" for="checkbox">
+                      <input type="checkbox" id="checkbox" />
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="mt-4 mx-3">
+                <span class="mx-2"> <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_556_6078)">
+                  <path d="M13 24.7577C13.455 24.7473 13.8916 24.5762 14.2326 24.2749C14.5736 23.9735 14.797 23.5613 14.8633 23.1111H11.0645C11.1327 23.5735 11.3666 23.9955 11.7226 24.2984C12.0787 24.6013 12.5326 24.7645 13 24.7577Z" fill="none"/>
+                  <path d="M23.4794 20.0994C22.783 19.4786 22.1733 18.7668 21.6666 17.9833C21.1136 16.9018 20.7821 15.7208 20.6916 14.5094V10.9416C20.6887 10.5083 20.6501 10.0759 20.5761 9.64887C20.0076 9.53523 19.4613 9.33036 18.9583 9.0422C19.1501 9.65959 19.2474 10.3024 19.2472 10.9489V14.5166C19.3357 15.9943 19.7422 17.4355 20.4389 18.7416C20.9375 19.5318 21.5291 20.2592 22.2011 20.9083H3.70498C4.37694 20.2592 4.96858 19.5318 5.4672 18.7416C6.16387 17.4355 6.57035 15.9943 6.65887 14.5166V10.9416C6.65507 10.1058 6.81618 9.27743 7.13297 8.50394C7.44976 7.73045 7.91601 7.02705 8.50503 6.43401C9.09404 5.84097 9.79425 5.36994 10.5656 5.04789C11.3369 4.72584 12.1641 4.55909 13 4.5572C14.2233 4.55818 15.4191 4.91994 16.4378 5.5972C16.3255 5.1848 16.2624 4.76055 16.25 4.33331V3.87831C15.4959 3.50735 14.6857 3.26333 13.8522 3.15609V2.24609C13.8522 1.99038 13.7506 1.74514 13.5698 1.56432C13.389 1.3835 13.1437 1.28192 12.888 1.28192C12.6323 1.28192 12.3871 1.3835 12.2063 1.56432C12.0255 1.74514 11.9239 1.99038 11.9239 2.24609V3.1922C10.0574 3.45549 8.34928 4.38513 7.11475 5.80948C5.88022 7.23384 5.20267 9.05674 5.2072 10.9416V14.5094C5.11675 15.7208 4.78526 16.9018 4.2322 17.9833C3.73451 18.765 3.13457 19.4767 2.44831 20.0994C2.37128 20.1671 2.30953 20.2504 2.26719 20.3438C2.22485 20.4372 2.20289 20.5385 2.20276 20.6411V21.6233C2.20276 21.8149 2.27885 21.9986 2.41429 22.134C2.54974 22.2694 2.73344 22.3455 2.92498 22.3455H23.0028C23.1943 22.3455 23.378 22.2694 23.5134 22.134C23.6489 21.9986 23.725 21.8149 23.725 21.6233V20.6411C23.7248 20.5385 23.7029 20.4372 23.6605 20.3438C23.6182 20.2504 23.5565 20.1671 23.4794 20.0994Z" fill="black"/>
+                  <path id="ogbor" d="M21.6667 7.94445C23.661 7.94445 25.2778 6.3277 25.2778 4.33334C25.2778 2.33898 23.661 0.722229 21.6667 0.722229C19.6723 0.722229 18.0555 2.33898 18.0555 4.33334C18.0555 6.3277 19.6723 7.94445 21.6667 7.94445Z" fill="none"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_556_6078">
+                  <rect width="26" height="26" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg> </span> <span class="txtcl3">Gaussian</span>    
+              </div>
+                <div class="">
+               <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ms-2" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="public/img/next.jpg" alt="">
+                   </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Account</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+                </div>
+              </div>
+            </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <span class="txtcl ms-2" style="font-weight: 900;">Featured</span>
+              <div class="row px-1 mt-2">
+                  <div class="col-lg-4">
+                      <div class="p-0 m-0" style="position: relative;">
+                   <a href="./fullnews.html"> <div class="card" style="border-radius: 12px; border: none;">
+                        <img src="./public/img/Rectangle 975.png" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <div class="mt-2"><span class="mt-3 text-white tipiny px-3 py-2">TIPS</span></div>
+                          <p class="card-text text-white mt-4 tipiny2">When Should You Run Your Own Blockchain Node?</p>
+                          <div class="tipiny3 mt-5"><p class="card-text text-white">5 mins read</p></div>
+                        </div>
+                      </div>
+                    </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="p-0 m-0" style="position: relative;">
+                      <a href="./fullnews.html"> <div class="card" style="border-radius: 12px; border: none;">
+                        <img src="./public/img/Rectangle 975.png" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <div class="mt-2"><span class="mt-3 text-white tipiny px-3 py-2">TIPS</span></div>
+                          <p class="card-text text-white mt-4 tipiny2">When Should You Run Your Own Blockchain Node?</p>
+                          <div class="tipiny3 mt-5"><p class="card-text text-white">5 mins read</p></div>
+                        </div>
+                      </div>
+                    </a>
+                        </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-0 m-0" style="position: relative;">
+                      <a href="./fullnews.html"> <div class="card" style="border-radius: 12px; border: none;">
+                        <img src="./public/img/Rectangle 975.png" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <div class="mt-2"><span class="mt-3 text-white tipiny px-3 py-2">TIPS</span></div>
+                          <p class="card-text text-white mt-4 tipiny2">When Should You Run Your Own Blockchain Node?</p>
+                          <div class="tipiny3 mt-5"><p class="card-text text-white">5 mins read</p></div>
+                        </div>
+                      </div>
+                    </a>
+                        </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+              <div class="row mt-5 px-2 py-4 tipbord mx-3">
+                  <div class="col-lg-3">
+                    <img src="./public/img/Rectangle 975.png" class="img-fluid" alt="" style="border-radius: 10px;">
+                  </div>
+                  <div class="col-lg-9">
+                    <div class="mt-4">
+                    <p class="txtcl toppy">Top 10 most Googled questions about cryptocurrency and its implication with impact to the world</p>
+                    <p class="toppy2">2 hours ago</p>
+                </div>
+                  </div>
+              </div>
+              <div class="row mt-5 px-2 py-4 tipbord mx-3">
+                <div class="col-lg-3">
+                  <img src="./public/img/Rectangle 975.png" class="img-fluid" alt="" style="border-radius: 10px;">
+                </div>
+                <div class="col-lg-9">
+                  <div class="mt-4">
+                  <p class="txtcl toppy">Top 10 most Googled questions about cryptocurrency and its implication with impact to the world</p>
+                  <p class="toppy2">2 hours ago</p>
+              </div>
+                </div>
+            </div>
+            <div class="row mt-5 px-2 py-4 tipbord mx-3">
+                <div class="col-lg-3">
+                  <img src="./public/img/Rectangle 975.png" class="img-fluid" alt="" style="border-radius: 10px;">
+                </div>
+                <div class="col-lg-9">
+                  <div class="mt-4">
+                  <p class="txtcl toppy">Top 10 most Googled questions about cryptocurrency and its implication with impact to the world</p>
+                  <p class="toppy2">2 hours ago</p>
+              </div>
+                </div>
+            </div>
+          </div>
+
+           
+        </div>
+
+      </div>
+  
+    </body>
+
+
+    <script>
+      const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  const currentTheme = localStorage.getItem('theme');
+  
+  if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+    
+      if (currentTheme === 'dark') {
+          toggleSwitch.checked = true;
+      }
+  }
+  
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+      }
+      else {        document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+      }    
+  }
+  
+  toggleSwitch.addEventListener('change', switchTheme, false);
+
+  </script>
+
+  
+  
+    <script src="./public/js/toggle.js"></script>
+    <script src="public/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/dataTables.bootstrap5.min.js"></script>
+    <script src="public/js/jquery.dataTables.min.js"></script>
+    <script src="public/js/script.js"></script>
+    </html>

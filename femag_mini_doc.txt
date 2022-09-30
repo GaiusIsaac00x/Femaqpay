@@ -1,0 +1,8 @@
+Available Pages
+1. Create Password (createpassword.html)
+2. Login with phone(loginphone.html)
+3. Login with phone and password(loginpassword.html)
+4. Create account with valid email (useremail.html)
+5. Verify phone number (verifyphonenumber.html)
+6. Register with first and last name (yourname.html)
+7. Register with phone number (yourphone.html)
